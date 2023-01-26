@@ -241,7 +241,6 @@ const handleZoomOut = () =>  scale -= 0.1;
         {#if config.floors}
             <div class="btns__row">
                 {#each config.floors as floor}
-                    <!-- svelte-ignore a11y-click-events-have-key-events -->
                     <button 
                         class="btns__btn" 
                         class:active={floor == activeFloor} 
@@ -256,7 +255,6 @@ const handleZoomOut = () =>  scale -= 0.1;
             {#if layer.options}
                 <div class="btns__row">
                     {#each layer.options as option}
-                        <!-- svelte-ignore a11y-click-events-have-key-events -->
                         <button 
                             class="btns__btn" 
                             class:active={
@@ -272,11 +270,9 @@ const handleZoomOut = () =>  scale -= 0.1;
             {/if}
         {/each}
         <div class="btns__row">
-            <!-- svelte-ignore a11y-click-events-have-key-events -->
             <button class="btns__btn" on:click={() => handleZoomIn()}>
                 Zoom+
             </button>
-            <!-- svelte-ignore a11y-click-events-have-key-events -->
             <button class="btns__btn" on:click={() => handleZoomOut()}>
                 Zoom-
             </button>
