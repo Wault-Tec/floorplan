@@ -242,13 +242,13 @@ const handleZoomOut = () =>  scale -= 0.1;
             <div class="btns__row">
                 {#each config.floors as floor}
                     <!-- svelte-ignore a11y-click-events-have-key-events -->
-                    <div 
+                    <button 
                         class="btns__btn" 
                         class:active={floor == activeFloor} 
                         on:click={() => changeFloor(floor)}
                     >
                         {floor}
-                    </div>
+                    </button>
                 {/each}
             </div>
         {/if}
@@ -257,7 +257,7 @@ const handleZoomOut = () =>  scale -= 0.1;
                 <div class="btns__row">
                     {#each layer.options as option}
                         <!-- svelte-ignore a11y-click-events-have-key-events -->
-                        <div 
+                        <button 
                             class="btns__btn" 
                             class:active={
                                 floorOptions[layer.name] && 
@@ -266,20 +266,20 @@ const handleZoomOut = () =>  scale -= 0.1;
                             on:click={() => handleClick(layer, option)} 
                         >
                             {option}
-                        </div>
+                        </button>
                     {/each}
                 </div>
             {/if}
         {/each}
         <div class="btns__row">
             <!-- svelte-ignore a11y-click-events-have-key-events -->
-            <div class="btns__btn" on:click={() => handleZoomIn()}>
+            <button class="btns__btn" on:click={() => handleZoomIn()}>
                 Zoom+
-            </div>
+            </button>
             <!-- svelte-ignore a11y-click-events-have-key-events -->
-            <div class="btns__btn" on:click={() => handleZoomOut()}>
+            <button class="btns__btn" on:click={() => handleZoomOut()}>
                 Zoom-
-            </div>
+            </button>
         </div>
     </div>
 </div>
@@ -322,7 +322,6 @@ const handleZoomOut = () =>  scale -= 0.1;
             height: 40px;
             background-color: #eee;
             border-radius: 5px;
-            cursor: pointer;
             transition: .3s;
         }
     }
