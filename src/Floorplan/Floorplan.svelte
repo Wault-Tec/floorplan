@@ -61,7 +61,7 @@ const loadImages = (layer) => {
         }
 
         let img = new Image();
-        const dx = Math.floor(layer.position.left);
+        const dx = Math.floor(layer.position.left); //Math.floor для оптимизации канвас
         const dy = Math.floor(layer.position.top);
         const dWidth = Math.floor(layer.size.width);
         const dHeight = Math.floor(layer.size.height);
