@@ -78,6 +78,7 @@ const loadImages = (layer) => {
                 opacity = config.opacityUnderFF
             }
             
+            //Конфиг для отрисовки канвас
             const ctxInfo = {
                 img,
                 dx,
